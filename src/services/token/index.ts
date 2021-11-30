@@ -57,7 +57,8 @@ const getSignConfig = (type: TokenType, id: string, expiresIn?: number) : SignOp
 const sign = (
   data: Object,
   type: TokenType,
-  id: string, expiresIn?: number,
+  id: string,
+  expiresIn?: number,
 ) => jwt.sign(data, ecKeys.private, getSignConfig(type, id, expiresIn));
 
 class Blacklist {
